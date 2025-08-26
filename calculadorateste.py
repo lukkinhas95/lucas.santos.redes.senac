@@ -15,3 +15,4 @@ else:
     resultado = "Operação inválida"
 
 print("Resultado:", resultado)
+    
