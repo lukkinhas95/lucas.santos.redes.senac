@@ -22,17 +22,35 @@
 #print(substration_absolute(900,9))
 
 
-def concreto (agua, cimento, areia, pedra):
-    total = agua + cimento + areia + pedra
-    if total == 0 or total < 0:
-        return {
-        "erro": "valor inválido"
-    }
-    return {
-    "agua": round((agua / total),2)*100,
-    "cimento": round((cimento / total),2)*100,
-    "areia": round((areia / total),2)*100,
-    "pedra": round((pedra / total),2)*100
-                   }
+#def concreto (agua, cimento, areia, pedra):
+#    total = agua + cimento + areia + pedra
+#    if total == 0 or total < 0:
+#        return {
+#        "erro": "valor inválido"
+#    }
+#    return {
+#    "agua": round((agua / total),2)*100,
+#    "cimento": round((cimento / total),2)*100,
+#    "areia": round((areia / total),2)*100,
+#    "pedra": round((pedra / total),2)*100
+#                   }
+#print(concreto (10,10,10,20))
 
-print(concreto (10,10,10,20))
+
+
+def calcula_pesos(pesos):
+    soma = 0
+    quantidade = 0    
+    for peso in pesos:
+        if peso != 0:
+            soma += peso
+            quantidade += 1    
+    media = soma / quantidade if quantidade > 0 else 0    
+    return {
+        "media": round(media, 2),
+        "total": round(soma, 2)
+    }
+pesos_teste = [10, 1, 25, 30, 108, 15]
+print(calcula_pesos(pesos_teste))
+print(calcula_pesos([10, 20, 30, 0, 40])) 
+print(calcula_pesos([50, 50, 50])) 
