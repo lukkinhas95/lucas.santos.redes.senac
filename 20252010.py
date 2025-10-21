@@ -38,19 +38,38 @@
 
 
 
-def calcula_pesos(pesos):
-    soma = 0
-    quantidade = 0    
-    for peso in pesos:
-        if peso != 0:
-            soma += peso
-            quantidade += 1    
-    media = soma / quantidade if quantidade > 0 else 0    
-    return {
-        "media": round(media, 2),
-        "total": round(soma, 2)
-    }
-pesos_teste = [10, 1, 25, 30, 108, 15]
-print(calcula_pesos(pesos_teste))
-print(calcula_pesos([10, 20, 30, 0, 40])) 
-print(calcula_pesos([50, 50, 50])) 
+#def calcula_pesos(pesos):
+#    soma = 0
+#    quantidade = 0    
+#    for peso in pesos:
+#        if peso != 0:
+#            soma += peso
+#            quantidade += 1    
+#    media = soma / quantidade if quantidade > 0 else 0    
+#    return {
+#        "media": round(media, 2),
+#        "total": round(soma, 2)
+#    }
+#pesos_teste = [10, 1, 25, 30, 108, 15]
+#print(calcula_pesos(pesos_teste))
+#print(calcula_pesos([10, 20, 30, 0, 40])) 
+#print(calcula_pesos([50, 50, 50])) 
+
+
+def analisa_lista(valores):
+    total = 0
+cont_sem_zeros = 0
+
+for v in valores:
+    total = total + v
+    if v != 0:
+        cont_sem_zeros = cont_sem_zeros + 1
+
+if cont_sem_zeros == 0:
+    media = 0
+else:
+    media = soma_sem_zeros / cont_sem_zeros
+    return 
+{
+        media": media, "soma": total
+        }
